@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <h1>你好</h1>
+    <h1>你好{{name}}</h1>
   </div>
   
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
     
+  },
+  props:{
+    name:{
+      type:String,
+      required:true,
+      default:'老王'
+    }
   }
 }
 </script>
